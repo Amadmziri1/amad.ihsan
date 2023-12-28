@@ -1,11 +1,10 @@
-header{
-    margin-bottom: 70px;
-}
-
 .artwork,
 .Graphic-Design {
   text-align: center;
-  padding: 0px 10% 10% 10%;
+  padding: 50px 10% 10% 10%;
+}
+.artwork{
+  padding-top: 70px;
 }
 .artwork h4,
 .Graphic-Design h4 {

@@ -1,0 +1,43 @@
+.artwork,
+.Graphic-Design {
+  text-align: center;
+  padding: 0% 10% 10% 10%;
+}
+.artwork h4,
+.Graphic-Design h4 {
+  margin-bottom: 20px;
+}
+.artwork-img,
+.Graphic-Design-img {
+  display: flex;
+  gap: 3%;
+  justify-content: center;
+}
+.artwork-img > *,
+.Graphic-Design-img > * {
+  flex: 1;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.artwork-img img,
+.Graphic-Design-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 365px) {
+  .artwork h4,
+  .Graphic-Design h4 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .artwork h4,
+  .Graphic-Design h4 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+}

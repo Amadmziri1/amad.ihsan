@@ -18,8 +18,8 @@ navLinkEls.forEach((navLinkEl) => {
   if (
     windowPathname === navLinkPathname ||
     (windowPathname === "/index.html" && navLinkPathname === "/") ||
-    (windowPathname === "/work.html") || 
-    (windowPathname === "/about.html")
+    (windowPathname === "/work") || 
+    (windowPathname === "/about")
   ) {
     navLinkEl.classList.add("active");
   }

@@ -1,9 +1,11 @@
-
+header{
+    margin-bottom: 70px;
+}
 
 .artwork,
 .Graphic-Design {
   text-align: center;
-  padding: 70px 10% 10% 10%;
+  padding: 0px 10% 10% 10%;
 }
 .artwork h4,
 .Graphic-Design h4 {

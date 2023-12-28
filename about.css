@@ -1,6 +1,10 @@
+header{
+    margin-bottom: 70px;
+}
 p{
     text-align: left;
     margin: 70px 7%;
+    margin-top: 0;
 }
 span{font-size: 1.3rem;}
 

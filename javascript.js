@@ -3,9 +3,9 @@ $(document).ready(function () {
 
   
 // not able right click my site 
-      document.addEventListener("contextmenu", (event) =>
-        event.preventDefault()
-      );
+      // document.addEventListener("contextmenu", (event) =>
+      //   event.preventDefault()
+      // );
 
 
 
@@ -15,7 +15,12 @@ const windowPathname = window.location.pathname;
 navLinkEls.forEach((navLinkEl) => {
   const navLinkPathname = new URL(navLinkEl.href).pathname; // Fix syntax for creating URL object
 
-  if (windowPathname === navLinkPathname || windowPathname === "/index.html" && navLinkPathname === '/') {
+  if (
+    windowPathname === navLinkPathname ||
+    (windowPathname === "/index.html" && navLinkPathname === "/") ||
+    (windowPathname === "/work.html") || 
+    (windowPathname === "/about.html")
+  ) {
     navLinkEl.classList.add("active");
   }
 });

@@ -27,6 +27,10 @@ navLinkEls.forEach((navLinkEl) => {
   if (windowPathname.endsWith("/work") && navLinkPathname === "/work.html") {
     navLinkEl.classList.add("active");
   }
+
+  if (windowPathname.endsWith("/about") && navLinkPathname === "/about.html") {
+    navLinkEl.classList.add("active");
+  }
 });
 
 

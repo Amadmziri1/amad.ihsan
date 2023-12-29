@@ -9,16 +9,35 @@ $(document).ready(function () {
 
 
 
-const navLinkEls = document.querySelectorAll("nav ul li a"); // Use correct class selector syntax
+const navLinkEls = document.querySelectorAll("nav ul li a");
 const windowPathname = window.location.pathname;
 
 navLinkEls.forEach((navLinkEl) => {
-  const navLinkPathname = new URL(navLinkEl.href).pathname; // Fix syntax for creating URL object
+  const navLinkPathname = new URL(navLinkEl.href).pathname;
 
-  if (windowPathname === navLinkPathname || windowPathname === "/index.html" && navLinkPathname === '/') {
+  // Check if the windowPathname ends with navLinkPathname or if they are exactly the same
+  if (
+    windowPathname.endsWith(navLinkPathname) ||
+    (windowPathname === "/index.html" && navLinkPathname === "/")
+  ) {
     navLinkEl.classList.add("active");
   }
 });
+
+
+
+
+
+// const navLinkEls = document.querySelectorAll("nav ul li a"); // Use correct class selector syntax
+// const windowPathname = window.location.pathname;
+
+// navLinkEls.forEach((navLinkEl) => {
+//   const navLinkPathname = new URL(navLinkEl.href).pathname; // Fix syntax for creating URL object
+
+//   if (windowPathname === navLinkPathname || windowPathname === "/index.html" && navLinkPathname === '/') {
+//     navLinkEl.classList.add("active");
+//   }
+// });
 
 
 

@@ -1,51 +1,31 @@
-
 $(document).ready(function () {
+  // not able right click my site
+  document.addEventListener("contextmenu", (event) => event.preventDefault());
 
-  
-// not able right click my site 
-      document.addEventListener("contextmenu", (event) =>
-        event.preventDefault()
-      );
+  const navLinkEls = document.querySelectorAll("nav ul li a");
+  const windowPathname = window.location.pathname;
 
+  navLinkEls.forEach((navLinkEl) => {
+    const navLinkPathname = new URL(navLinkEl.href).pathname;
 
+    // Check if the windowPathname ends with navLinkPathname or if they are exactly the same
+    if (
+      windowPathname.endsWith(navLinkPathname) ||
+      (windowPathname === "/index.html" && navLinkPathname === "/")
+    ) {
+      navLinkEl.classList.add("active");
+    }
 
-const navLinkEls = document.querySelectorAll("nav ul li a");
-const windowPathname = window.location.pathname;
+    // Special case: Check if the URL ends with "/about" to activate the "About" link
+    if (windowPathname === "/about" && navLinkPathname === "/about.html") {
+      navLinkEl.classList.add("active");
+    }
 
-navLinkEls.forEach((navLinkEl) => {
-  const navLinkPathname = new URL(navLinkEl.href).pathname;
-
-  // Check if the windowPathname ends with navLinkPathname or if they are exactly the same
-  if (
-    windowPathname.endsWith(navLinkPathname) ||
-    (windowPathname === "/index.html" && navLinkPathname === "/")
-  ) {
-    navLinkEl.classList.add("active");
-  }
-
-  // Special case: Check if the URL ends with "/about" to activate the "About" link
-  if (windowPathname === "/about" && navLinkPathname === "/about.html") {
-    navLinkEl.classList.add("active");
-  }
-});
-
-
-
-
-
-
-// const navLinkEls = document.querySelectorAll("nav ul li a"); // Use correct class selector syntax
-// const windowPathname = window.location.pathname;
-
-// navLinkEls.forEach((navLinkEl) => {
-//   const navLinkPathname = new URL(navLinkEl.href).pathname; // Fix syntax for creating URL object
-
-//   if (windowPathname === navLinkPathname || windowPathname === "/index.html" && navLinkPathname === '/') {
-//     navLinkEl.classList.add("active");
-//   }
-// });
-
-
+    // Special case: Check if the URL ends with "/work" to activate the "Work" link
+    if (windowPathname === "/work" && navLinkPathname === "/work.html") {
+      navLinkEl.classList.add("active");
+    }
+  });
 
   $("header #list-icon").click(function () {
     // Toggle the 'show' class on the 'nav ul'

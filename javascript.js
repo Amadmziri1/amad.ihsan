@@ -26,12 +26,19 @@ navLinkEls.forEach((navLinkEl) => {
   // Special case: Check if the URL ends with "/work" to activate the "Work" link
   if (
     (windowPathname.endsWith("/work") && navLinkPathname === "/work.html") ||
-    (windowPathname.endsWith("/about") && navLinkPathname === "/about.html")
+    (windowPathname === "/work" && navLinkPathname === "/work.html") // Add this condition for exact match
+  ) {
+    navLinkEl.classList.add("active");
+  }
+
+  // Special case: Check if the URL ends with "/about" to activate the "About" link
+  if (
+    (windowPathname.endsWith("/about") && navLinkPathname === "/about.html") ||
+    (windowPathname === "/about" && navLinkPathname === "/about.html") // Add this condition for exact match
   ) {
     navLinkEl.classList.add("active");
   }
 });
-
 
 
 

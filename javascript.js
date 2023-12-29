@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // not able right click my site
-  // document.addEventListener("contextmenu", (event) => event.preventDefault());
+  document.addEventListener("contextmenu", (event) => event.preventDefault());
 
   const navLinkEls = document.querySelectorAll("nav ul li a");
   const windowPathname = window.location.pathname;

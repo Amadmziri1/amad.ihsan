@@ -1,32 +1,4 @@
 
 p{
-    text-align: left;
-    margin: 70px 7%;
-}
-span{font-size: 1.3rem;}
-
-/* sfsdfdfvdsffdsfsdfdsfdfsdfsdfsdfsddfsdfsdfsdf */
-
-@media (max-width: 700px) {
-header{
-    margin-bottom: 30px;
-}
-span{font-size: 1.1rem;}
-}
-
-@media (max-width: 365px) {
-p{
-    margin: 50px 3%;
-    font-size: 0.8rem;
-}
-span{font-size: 0.9rem;}
-}
-
-
-@media (min-width: 1400px) {
-p{
-    margin: 100px 10%;
-    font-size: 1.8rem;
-}
-span{font-size: 2rem;}
+      padding-top: 6rem;
 }

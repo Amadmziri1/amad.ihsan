@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // not able right click my site
-  document.addEventListener("contextmenu", (event) => event.preventDefault());
+  // document.addEventListener("contextmenu", (event) => event.preventDefault());
 
   const navLinkEls = document.querySelectorAll("nav ul li a");
   const windowPathname = window.location.pathname;
@@ -27,10 +27,11 @@ $(document).ready(function () {
     }
   });
 
-  $("header #list-icon").click(function () {
+  $("header #list-icon").click(function (event) {
     // Toggle the 'show' class on the 'nav ul'
     $("nav ul").addClass("show");
     $("#close-icon").css("display", "block");
+    event.preventDefault();
   });
 
   $("header #close-icon").click(function () {

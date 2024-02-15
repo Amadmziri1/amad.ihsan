@@ -1,4 +1,34 @@
 $(document).ready(function () {
+  var spanText = function (text) {
+    var string = $(text).text();
+    var spaned = "";
+    for (var i = 0; i < string.length; i++) {
+      if (string.substring(i, i + 1) === " ")
+        spaned += string.substring(i, i + 1);
+      else spaned += "<span>" + string.substring(i, i + 1) + "</span>";
+    }
+    $(text).html(spaned);
+  };
+
+  var headline = $("h1");
+
+  spanText(headline);
+
+  //******************************************************* */
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $(".My-Creative-Vision h3").addClass("ac");
+    }
+    if ($(this).scrollTop() > 500) {
+      $(".My-Creative-Vision h2").addClass("ac");
+    }
+  });
+});
+
+
+  //******************************************************* */
+
   // not able right click my site
   // document.addEventListener("contextmenu", (event) => event.preventDefault());
 

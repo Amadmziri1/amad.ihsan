@@ -1,18 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap");
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: "Poppins", sans-serif;
   color: #ffffff;
-  transition: 0.5s;
 }
+
 body {
+  font-family: "Poppins", sans-serif;
   background-color: #212529;
   padding: 1% 4% 1% 4%;
 }
-.body-home {
+
+.background {
+  margin: -1% -4% -1% -4%;
+  padding: 1% 4% 1% 4%;
   height: 100vh;
   background: url(amad-copy.jpg);
   background-size: cover;
@@ -26,6 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 nav ul {
   display: flex;
   gap: 3rem;
@@ -34,23 +39,197 @@ nav ul {
 nav a {
   color: #bababa;
 }
+
 nav ul li a:hover {
   color: white;
 }
+
 .active {
   /*used in javascript */
   color: white;
   font-weight: bolder;
 }
+
 #p {
   flex: 1;
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: center; /* Center content vertically */
-  padding-top: 8rem;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 10), 1px 1px 10px rgba(0, 0, 0, 10),
-    1px 1px 10px rgba(0, 0, 0, 10), 1px 1px 10px rgba(0, 0, 0, 10);
+}
+
+#p h1 {
+  font-family: "Oswald";
+  word-spacing: 20rem;
+  text-shadow: 10px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0),
+    1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgb(0, 0, 0);
+}
+#p h1 span {
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: 7rem;
+  display: inline-block;
+  opacity: 0;
+  text-transform: uppercase;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+}
+#p h1 span:nth-child(1) {
+  animation-delay: 0.2s;
+  animation-name: fadeInLeft;
+}
+#p h1 span:nth-child(2) {
+  animation-delay: 0.4s;
+  animation-name: fadeInLeft;
+}
+#p h1 span:nth-child(3) {
+  animation-delay: 0.6s;
+  animation-name: fadeInLeft;
+}
+#p h1 span:nth-child(4) {
+  animation-delay: 0.8s;
+  animation-name: fadeInLeft;
+}
+#p h1 span:nth-child(5) {
+  animation-delay: 1s;
+  animation-name: fadeInLeft;
+}
+#p h1 span:nth-child(10) {
+  animation-delay: 0s;
+  animation-name: fadeInRight;
+}
+#p h1 span:nth-child(9) {
+  animation-delay: 0.2s;
+  animation-name: fadeInRight;
+}
+#p h1 span:nth-child(8) {
+  animation-delay: 0.4s;
+  animation-name: fadeInRight;
+}
+#p h1 span:nth-child(7) {
+  animation-delay: 0.6s;
+  animation-name: fadeInRight;
+}
+#p h1 span:nth-child(6) {
+  animation-delay: 0.8s;
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(10%, 30%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-10%, -30%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#description p {
+  position: relative;
+  font-size: 1.1em;
+  overflow: hidden;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+#description p::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    #212529 20%,
+    #212529 100%
+  );
+  animation: animate 5s linear forwards;
+}
+@keyframes animate {
+  0% {
+    top: -20%;
+  }
+  50% {
+    top: 120%;
+  }
+}
+
+.My-Creative-Vision {
+  font-family: "Montserrat";
+}
+.My-Creative-Vision h3 {
+  text-align: center;
+  font-size: 2rem;
+      opacity: 0;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ac {
+  animation: fadeIn 5s ease forwards;
+}
+
+.My-Creative-Vision .MCV-IMG {
+  display: flex;
+  gap: 5rem;
+  padding: 2.5rem 7rem;
+}
+.My-Creative-Vision .MCV-IMG > * {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.My-Creative-Vision .MCV-IMG h2 {
+  color: white;
+  text-align: center;
+  position: relative;
+  font-size: 1.5rem;
+  bottom: 3rem;
+        opacity: 0;
+
+}
+
+.My-Creative-Vision .MCV-IMG img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.My-Creative-Vision .MCV-IMG div::before {
+  content: "";
+  position: absolute;
+  bottom: 20%; /* chonki image height is 80% */
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  border-radius: 10px; /* chonki image 10px */
 }
 
 .social-icon {
@@ -67,17 +246,24 @@ nav ul li a:hover {
   display: none;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 2px solid #4e5760;
+  color: #4e5760;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
 /* sfsdfdfvdsffdsfsdfdsfdfsdfsdfsdfsddfsdfsdfsdf */
 
 @media (max-width: 700px) {
   body {
     padding: 5%;
   }
-  .body-home {
-    background: url("");
-    background-color: #212529;
-    height: 100vh;
-  }
+
   header {
     position: relative;
   }
@@ -103,10 +289,43 @@ nav ul li a:hover {
     display: flex;
   }
   #p {
-    text-shadow: none;
     flex: 0;
-    padding: 5rem 0 2rem 0;
   }
+  #p h1 {
+    word-spacing: 1rem;
+    text-shadow: none;
+  }
+  #p h1 span {
+    font-size: 3rem;
+    padding: 3rem 0 1rem 0;
+  }
+
+  .background {
+    background: url("");
+    height: 0%;
+  }
+
+  #description p {
+    font-size: 1.1rem;
+
+    margin-top: 1rem;
+  }
+
+  .My-Creative-Vision .MCV-IMG {
+    flex-direction: column;
+    padding: 2rem 0rem 10rem 0;
+    gap: 3rem;
+    height: 60rem;
+  }
+
+  .My-Creative-Vision .MCV-IMG img {
+    height: 100%;
+  }
+
+  .My-Creative-Vision .MCV-IMG div::before {
+    bottom: 0px;
+  }
+
   .social-icon i {
     font-size: 1.5rem;
   }
@@ -123,15 +342,31 @@ nav ul li a:hover {
     padding: 8px 0 8px 8px;
   }
   #me {
-    flex: 1;
     display: block;
+    margin: 0 -20px;
   }
   #me img {
     width: 100%;
     object-fit: cover;
   }
-}
+  .animated-image {
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start opacity */
+    }
+    to {
+      opacity: 1; /* End opacity */
+    }
+  }
 
+  .footer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
 
 @media (min-width: 1700px) {
   header h2 {

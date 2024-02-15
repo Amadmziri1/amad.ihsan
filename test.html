@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-body {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Animation</title>
+<style>
+/* Define your animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: slide up effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Optional: slide up effect */
+  }
+}
+
+/* Apply animation to the elements */
+.ac {
+  animation: fadeIn 5s ease forwards; /* Adjust duration and timing function as needed */
+}
+
+/* Other CSS styles */
+.re {
+  margin: 500px 0;
   padding: 20px;
-  font-family: sans-serif;
-  background: #f2f2f2;
-}
-img {
-  width: 100%;
-  height: 100%;
-    object-fit: cover;
-
+  border: 1px solid #ccc;
 }
 
-.grid-container {
- display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows:35.5vw;
-  grid-gap: 0.5vw;
+h3 {
+  margin: 0;
+  padding: 0;
 }
-
-
-  </style>
+</style>
 </head>
 <body>
 
-  <div class="grid-container">
-
-
-
-
-<div>
-  						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/london-768x432.jpg" alt="london">	
-
+<!-- Your HTML content -->
+<div class="re">
+  <h3>Heading 1</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 
-          <div>
-            <img src="IMG_3733.JPG" />
-          </div>
-          <div>
-            <img src="IMG_3733.JPG" />
-          </div>
-          <div>
-            <img src="gas.JPG" />
-          </div>
-          <div>
-            <img src="IMG_3733.JPG" />
-          </div>
-          <div>
-            <img src="gas.JPG" />
-          </div>
-          <div>
-            <img src="IMG_3733.JPG" />
-          </div>
-          <div>
-            <img src="IMG_3733.JPG" />
-          </div>
+<div class="re">
+  <h3>Heading 2</h3>
+  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
 
-  </div>
-
+<!-- jQuery and your script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+       $('h3').addClass('ac');
+    }});
+});
+</script>
 </body>
 </html>

@@ -15,18 +15,24 @@ $(document).ready(function () {
   spanText(headline);
 
   //******************************************************* */
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $(".My-Creative-Vision h3").addClass("ac");
-    }
-    if ($(this).scrollTop() > 500) {
-      $(".My-Creative-Vision h2").addClass("ac");
-    }
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $(".My-Creative-Vision h3").addClass("ac");
+      }
+      if ($(this).scrollTop() > 500) {
+        $(".My-Creative-Vision h2").addClass("ac");
+      }
+    });
   });
-});
 
-
+  //******************************************************* */
+  $("#forest").click(function () {
+    window.location.href = "work.html#artwork";
+  });
+ $("#web").click(function () {
+   window.location.href = "work.html#web";
+ });
   //******************************************************* */
 
   // not able right click my site

@@ -208,6 +208,7 @@ main {
         word-spacing: 1vw;
         letter-spacing: 3px;
         font-weight: 400;
+        margin: -1rem 0 0.5rem 0;
       }
     }
   }
@@ -222,7 +223,6 @@ main {
       display: block;
     }
     & img {
-      margin-top: 0.5rem;
       opacity: 0;
       width: 100%;
       object-fit: cover;
@@ -240,7 +240,7 @@ main {
 
   p {
     position: relative;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1.2rem + 0.8vw);
     font-weight: 300;
     text-align: center;
     opacity: 0;

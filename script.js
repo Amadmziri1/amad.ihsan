@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //////////////////////////////////////////
   // not able right click my site
-  // document.addEventListener("contextmenu", (event) => event.preventDefault());
+  document.addEventListener("contextmenu", (event) => event.preventDefault());
   ///////////////////////////////////////////////////////////////
   const navLinkEls = document.querySelectorAll("nav ul li a");
   const windowPathname = window.location.pathname;
@@ -78,9 +78,8 @@ $(document).ready(function () {
         if (entry.isIntersecting) {
           // Perform actions based on observed elements
           if ($(entry.target).is(".description")) {
-              $(".description span").addClass("animated-description");
-              $(".description p").css("opacity", "1");
-            
+            $(".description span").addClass("animated-description");
+            $(".description p").css("opacity", "1");
           } else if ($(entry.target).is(".My-Creative-Vision > h1")) {
             $(".My-Creative-Vision > h1").addClass("h-animation");
           } else if ($(entry.target).is(".me-mobile img")) {
@@ -128,9 +127,7 @@ $(document).ready(function () {
           } else if (
             $(entry.target).is(".about-paragraph .animation-overlay")
           ) {
-            $(".animation-overlay span").addClass(
-              "animated-description"
-            );
+            $(".animation-overlay span").addClass("animated-description");
             $(".animation-overlay p").css("opacity", "1");
           }
         }

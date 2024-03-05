@@ -1,78 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>work</title>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-      />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Web amad ihsan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="dist/home.css" />
+    <link rel="stylesheet" type="text/css" href="dist/work.css" />
 
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      />
-      <link rel="stylesheet" type="text/css" href="index.css" />
-      <link rel="stylesheet" type="text/css" href="work.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-        rel="stylesheet"
-      />
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <header>
+          <a href="/"> <h2>AMAD IHSAN</h2></a>
+          <nav>
+            <ul>
+              <li><a href="/">HOME</a></li>         
+              <li><a href="/work.html">WORK</a></li>
+              <li><a href="/about.html">ABOUT</a></li>
+            </ul>
+          </nav>
+          <button class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </button>
+        </header>
+        <span class="overlay"></span>
+      </section>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="javascript.js"></script>
-    </head>
-
-    <body>
-      <header>
-        <a href="/"> <h2>AMAD IHSAN</h2></a>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/work.html">Work</a></li>
-            <li><a href="/about.html">About</a></li>
-          </ul>
-        </nav>
-        <!-- <i id="close-icon" class="bi bi-x-lg"></i> -->
-
-        <img id="list-icon" src="list.svg" width="43px" alt="" />
-        <img id="close-icon" src="x-lg.svg" width="43" alt="" />
-      </header>
-      <div class="artwork">
-        <h2 id="artwork">ART WORK</h2>
-        <div class="artwork-img">
+      <div class="tz-gallery">
+        <h1 id="artwork-work-animation">Art Work</h1>
+        <div class="grid-gallery" id="art-imgs">
           <div>
-            <img src="gas2.jpg" />
+            <a href="gas2.jpg">
+              <img src="gas2.jpg" alt="Bridge" />
+            </a>
           </div>
-          <div>
-            <img src="FOREST.jpg" />
+          <div class="hidden-image">
+            <a href="FOREST.jpg">
+              <img src="FOREST.jpg" alt="Park" />
+            </a>
           </div>
-          <div>
-            <img src="JAPAN STREET2.jpg" />
+          <div class="hidden-image">
+            <a href="JAPAN STREET2.jpg">
+              <img src="JAPAN STREET2.jpg" alt="Tunnel" />
+            </a>
           </div>
-          <div>
-            <img src="bridge copy.jpg" />
+          <div class="hidden-image">
+            <a href="bridge copy.jpg">
+              <img src="bridge copy.jpg" alt="Traffic" />
+            </a>
           </div>
         </div>
-        <h3 id="web">WEB DESIGN</h3>
-        <div class="artwork-img">
-          <div>
-            <img src="tour2.jpg" />
-          </div>
-          <div>
-            <img src="RS7.jpg" />
-          </div>
-        </div>
+        <button id="toggleButton"><p>More</p> <i class="fa-solid fa-chevron-down"></i></i></button>
       </div>
+      <div class="tz-gallery">
+        <h1 id="web-work-animation">Web Design</h1>
+        <div class="grid-gallery" id="web-imgs">
+          <div>
+            <a href="RS7.jpg">
+              <img src="RS7.jpg" alt="Bridge" />
+            </a>
+          </div>
+          <div class="hidden-image2">
+            <a href="tour2.jpg">
+              <img src="tour2.jpg" alt="Park" />
+            </a>
+          </div>
+          <!-- <div class="hidden-image2">
+          <a href="amadihsan2.jpg">
+            <img src="amadihsan2.jpg" alt="Tunnel" />
+          </a>
+        </div>
+        --></div>
+        <button id="toggleButton2"><p>More</p> <i class="fa-solid fa-chevron-down"></i></i></button>
+      </div>
+    </main>
 
-        <div class="social-icon">
+    <aside>
+      <div class="social-icon">
         <a
           href="https://pin.it/5piVvS6Pr"
           target="_blank"
@@ -100,6 +128,13 @@
           ><i class="fa-brands fa-linkedin-in"></i>
         </a>
         <a
+          href="https://www.tiktok.com/@amad.ihsan?_t=8k5uYhBrOMg&_r=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-tiktok"></i>
+        </a>
+        <a
           href="mailto:amadmziri1@outlook.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -112,6 +147,12 @@
         <p>© AMAD IHSAN</p>
         <p>2023</p>
       </div>
-      
-    </body>
-  </html>
+    </aside>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run(".tz-gallery");
+    </script>
+  </body>
+</html>

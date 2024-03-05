@@ -1,0 +1,21 @@
+@use "../util" as u;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--text-color);
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: u.$PoppinsF;
+  background-color: #212529;
+}
+ 

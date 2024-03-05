@@ -1,2 +1,0 @@
-# amad-ihsan
-  website

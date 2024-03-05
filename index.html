@@ -1,81 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>AMAD IHSAN</title>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-      />
-
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      />
-      <link rel="stylesheet" type="text/css" href="index.css" />
-
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-        rel="stylesheet"
-      />
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="javascript.js"></script>
-    </head>
-
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Web amad ihsan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="dist/home.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
       <section class="background">
         <header>
           <a href="/"> <h2>AMAD IHSAN</h2></a>
           <nav>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/work.html">Work</a></li>
-              <li><a href="/about.html">About</a></li>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/work.html">WORK</a></li>
+              <li><a href="/about.html">ABOUT</a></li>
             </ul>
           </nav>
-          <img id="list-icon" src="list.svg" width="43px" alt="" />
-          <img id="close-icon" src="x-lg.svg" width="43px" alt="" />
+          <button class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </button>
         </header>
-
-        <div id="p">
+        <span class="overlay"></span>
+        <div class="container">
           <h1>AMAD IHSAN</h1>
         </div>
       </section>
 
-      <div id="me">
-        <img src="amadihsan2.jpg" alt="" class="animated-image" />
+      <div class="me-mobile">
+        <img src="amadihsan2.jpg" alt="" />
       </div>
 
-      <div id="description">
+      <div class="description">
         <p>
-          Adept in digital creativity, skilled at crafting mesmerizing art and
-          building captivating websites. Driven by a passion for innovation, I
-          specialize in delivering visually compelling experiences that resonate
-          with audiences on a profound level.
+          I'm <b>Amad Ihsan</b>, proficient in digital creativity, specializing
+          in 2D and 3D design, with expertise UI/UX and web developing
         </p>
+        <span></span>
       </div>
 
-      <section class="My-Creative-Vision">
-        <h3 class="re">My Creative Vision</h3>
+      <div class="My-Creative-Vision">
+        <h1>My Creative Vision</h1>
         <div class="MCV-IMG">
           <div id="forest">
-            <img src="FOREST.jpg"  />
+            <img src="FOREST.jpg" />
+            <span></span>
             <h2>Art Work</h2>
           </div>
-          <div id="web">
-            <img src="tour2.jpg"  />
+          <div id="tour">
+            <img src="tour2.jpg" />
+            <span></span>
             <h2>Web Design</h2>
           </div>
         </div>
-      </section>
+      </div>
+    </main>
 
+    <aside>
       <div class="social-icon">
         <a
           href="https://pin.it/5piVvS6Pr"
@@ -104,6 +100,13 @@
           ><i class="fa-brands fa-linkedin-in"></i>
         </a>
         <a
+          href="https://www.tiktok.com/@amad.ihsan?_t=8k5uYhBrOMg&_r=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-tiktok"></i>
+        </a>
+        <a
           href="mailto:amadmziri1@outlook.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -116,6 +119,6 @@
         <p>© AMAD IHSAN</p>
         <p>2023</p>
       </div>
-      
-    </body>
+    </aside>
+  </body>
 </html>

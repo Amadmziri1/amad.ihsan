@@ -1,0 +1,74 @@
+@use "../util" as u;
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap");
+
+.tz-gallery {
+  padding: 0 6vw;
+  h1 {
+    font-size: calc(1.5rem + 2vw);
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+  }
+  .grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    gap: calc(1rem + 1vw);
+    margin: 1rem 0;
+    opacity: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    & > * {
+      height: calc(15rem + 18vw);
+    }
+  }
+  #toggleButton,
+  #toggleButton2 {
+    display: none;
+  }
+  .baguetteBox-button {
+    background-color: transparent !important;
+  }
+  #web-work-animation {
+    margin-top: calc(5rem + 5vw);
+  }
+
+  @include u.breakpoint-down("small") {
+    & {
+      .grid-gallery {
+        justify-content: center;
+        grid-template-columns: 1fr;
+        & > * {
+          height: calc(21rem + 21vw);
+        }
+        .hidden-image,
+        .hidden-image2 {
+          display: none;
+        }
+      }
+      #toggleButton,
+      #toggleButton2 {
+        margin: auto;
+        display: block;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0cap;
+        opacity: 0;
+      }
+    }
+  }
+  @include u.breakpoint-up("xlarge") {
+    & > {
+      .grid-gallery > * {
+        height: calc(25rem + 25vw);
+      }
+    }
+  }
+}
